@@ -100,7 +100,7 @@ if __name__ == "__main__":
 		appname += "-" + args.version
 	
 	# create command
-	command = 'py -%d.%d -m PyInstaller "%s" --log-level "%s" --clean -F --version-file "version.txt" --distpath "%s" --workpath "%s" --specpath "%s"' % ( sys.version_info[:2] + (script, loglevel, distpath, buildpath, specpath,) )
+	command = 'py -%d.%d -m PyInstaller "%s" --log-level "%s" --clean -F --distpath "%s" --workpath "%s" --specpath "%s"' % ( sys.version_info[:2] + (script, loglevel, distpath, buildpath, specpath,) )
 	if args.icon != None:
 		command += ' -i "%s"' % args.icon
 	command += ' --win-private-assemblies --win-no-prefer-redirects'
